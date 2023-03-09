@@ -1,0 +1,22 @@
+<%- include('../cabecalho.ejs') %>
+<form method="post" enctype="multipart/form-data">
+    <br><br>
+    ID<br>
+    <input type="text" name="id" readonly value="<%=Casa._id%>">
+    <br><br>
+    
+    preco_noite<br> 
+    <input type="text" name="preco_noite" placeholder="Digite o preco_noite.">
+    <br><br>
+    endereco<br>
+    <input type="text" name="endereco" placeholder="Digite a localização">
+    <br><br>
+    horario<br>
+    <input type="time" name="horario" placeholder="Digite o horario de funcionamento.">
+    <br><br>
+    Foto<br>
+    <input type="file" name="foto">
+    <br><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%- include('../rodape.ejs') %>

@@ -1,0 +1,25 @@
+<%- include('../cabecalho.ejs') %>
+<form method="post" enctype="multipart/form-data">
+   texto<br> 
+    <textarea class="form-control" type="text" name="texto" placeholder="Digite o texto."> </textarea>
+    <br><br>
+    
+    
+    dono<br>
+    <select name="dono" class="form-select" aria-label="selecione um dono">
+      <% Donos.forEach(function(dono){ %>
+        <option value="<%=dono._id %>"><%= dono.nome%></option>
+      <% }); %>
+      </select>
+      <br><br>
+    casa<br>
+    <select name="casa" class="form-select" aria-label="selecione um casa">
+      <% Casas.forEach(function(casa){ %>
+        <option value="<%=casa._id %>"><%= casa.endereco%></option>
+      <% }); %>
+      </select>
+    
+    <br><br>
+    <input class="form-control" type="submit" value="Adicionar">
+</form>
+<%- include('../rodape.ejs') %>

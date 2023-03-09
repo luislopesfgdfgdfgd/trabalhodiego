@@ -1,0 +1,26 @@
+<%- include('../cabecalho.ejs') %>
+<form method="post" enctype="multipart/form-data">
+    Nome<br> 
+    <input type="text" name="nome" placeholder="Digite seu nome.">
+    <br><br>
+    Email<br>
+    <input type="email" name="email" placeholder="Digite seu email.">
+    <br><br>
+    Telefone<br>
+    <input type="number" name="telefone" placeholder="Digite sua telefone.">
+    <br><br>
+    Foto<br>
+    <input type="file" name="foto">
+    <br><br>
+    <input type="submit" value="Adicionar">
+    
+    <br><br>
+    casa<br>
+    <select name="casa" class="form-select" aria-label="selecione um casa">
+      <% Casas.forEach(function(casa){ %>
+        <option value="<%=casa._id %>"><%= casa.endereco%></option>
+      <% }); %>
+      </select>
+    <br><br>
+</form>
+<%- include('../rodape.ejs') %>

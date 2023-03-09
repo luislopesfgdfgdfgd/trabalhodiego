@@ -1,0 +1,14 @@
+<%- include('../cabecalho.ejs') %>
+<form method="post" enctype="multipart/form-data">
+    preco_noite<br> 
+    <input type="number" name="preco_noite" placeholder="Digite o preco_noite.">
+    <br><br>
+    endereco<br>
+    <input type="text" name="endereco" placeholder="Digite a localização">
+    <br><br>
+       Foto<br>
+    <input type="file" name="foto">
+    <br><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%- include('../rodape.ejs') %>
